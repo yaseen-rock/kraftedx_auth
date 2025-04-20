@@ -18,6 +18,10 @@ A lightweight authentication system built with:
 - 🎨 Custom UI components
 - ⚡ Optimized performance
 
+## 📦 System Architecture
+
+![deepseek_mermaid_20250420_beb51a](https://github.com/user-attachments/assets/665fed2d-fb1f-4c04-8d3b-0ac68af45eaf)
+
 
 ## 📦 System Architecture
 
