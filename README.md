@@ -21,7 +21,7 @@ A lightweight authentication system built with:
 
 ## 📦 System Architecture
 
-```ASCII Diagram
+ASCII Diagram
 
 ┌───────────────────────────────────────────────────┐
 │                    User Flow                      │
@@ -48,7 +48,7 @@ A lightweight authentication system built with:
 └─────────────┘                       └─────────────┘
                                      └──────────────┘
 
-```Mermaid.js Diagram
+Mermaid.js Diagram
 
 ![deepseek_mermaid_20250420_beb51a](https://github.com/user-attachments/assets/45804a00-527a-48e4-8c09-36992b082cc2)
 
