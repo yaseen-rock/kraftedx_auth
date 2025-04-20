@@ -18,21 +18,52 @@ A lightweight authentication system built with:
 - 🎨 Custom UI components
 - ⚡ Optimized performance
 
-## 📦 System Architecture
-```mermaid
 
-![Image Description](https://i.ibb.co/17HLXKV/Screenshot-187-1-1.png)
-graph TD
-    A[Login Page] -->|Submit| B(Auth Context)
-    B -->|Validate| C{Credentials}
-    C -->|Valid| D[LocalStorage]
-    C -->|Invalid| A
-    D --> E[Protected Routes]
-    E --> F[Dashboard]
-    F -->|Logout| B
-```
-## 📦 System 
-![deepseek_mermaid_20250420_65596d](https://github.com/user-attachments/assets/2b3b3fe7-606f-45e6-bb83-3b8e8866a407)
+## 📦 System Architecture
+
+```ASCII Diagram
+
+┌───────────────────────────────────────────────────┐
+│                    User Flow                      │
+└───────────────────────────────────────────────────┘
+       │
+       ▼
+┌─────────────┐    ┌─────────────┐    ┌─────────────┐
+│  /login     │───▶│ AuthContext │───▶│ localStorage │
+│ (page.js)   │    │ (login)     │    │ (user data)  │
+└─────────────┘    └─────────────┘    └─────────────┘
+       │                  ▲                  │
+       │                  │                  ▼
+       ▼                  │           ┌─────────────┐
+┌─────────────┐          │           │ session     │
+│ /dashboard  │          │           │ management  │
+│ (page.js)   │          │           └─────────────┘
+└─────────────┘          │                  ▲
+       │                  │                  │
+       ▼                  │                  │
+┌─────────────┐    ┌─────────────┐    ┌─────────────┐
+│ Protected   │────▶│ AuthContext │────▶│ logout      │
+│ Route       │    │ (check auth)│    │ (clear      │
+│             │    └─────────────┘    │  storage)   │
+└─────────────┘                       └─────────────┘
+                                     └──────────────┘
+
+```Mermaid.js Diagram
+
+![deepseek_mermaid_20250420_beb51a](https://github.com/user-attachments/assets/45804a00-527a-48e4-8c09-36992b082cc2)
+
+```Sequence of Operations:
+1 Login:
+
+![deepseek_mermaid_20250420_9e8a0d](https://github.com/user-attachments/assets/b1f7f14a-eb46-4c6d-b76a-db8bbf25ccc2)
+
+2 Dashboard Access:
+
+![deepseek_mermaid_20250420_235ec6](https://github.com/user-attachments/assets/357944dd-4050-4d99-b7af-1cc2f703a886)
+
+3 Logout:
+
+![deepseek_mermaid_20250420_f84885](https://github.com/user-attachments/assets/17460bd3-c499-4799-8275-bb746f7aecf5)
 
 
 ## 🛠️ Installation
@@ -51,6 +82,17 @@ npm install
 ```bash
 npm run dev
 ```
+
+## Screenshot
+
+1 Login Page
+
+![Screenshot (197)](https://github.com/user-attachments/assets/626826ac-e0bf-41bd-b73f-4da3eafccb36)
+
+2 Dashboard
+
+![Screenshot (198)](https://github.com/user-attachments/assets/b8a367d0-1db6-477e-ac67-51ff8aea57b4)
+
 
 ## 🔐 Authentication Flow
 
@@ -100,20 +142,6 @@ const validCredentials = {
   password: 'your-password'  // Change this
 };
 ```
-
-## 🚀 Production Ready?
-| Feature               | Status  | Notes                      |
-|-----------------------|---------|----------------------------|
-| Client-side Auth      | ✅      | Good for demos             |
-| Server-side Validation| ❌      | Add Node.js/Express API    |
-| HTTPS                 | ❌      | Mandatory for production   |
-| Rate Limiting         | ❌      | Implement on server        |
-
-## 📝 Best Practices
-1. **Never store real credentials** in client-side code
-2. **Add server-side validation** for production
-3. **Use environment variables** for sensitive data
-4. **Implement CSRF protection** for forms
 
 ## 📜 License
 MIT © [Yaseen] 2025
