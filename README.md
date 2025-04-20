@@ -1,46 +1,18 @@
-
-```markdown
 # KRAFTEDX Authentication System
 
 *A secure client-side authentication flow for creative teams*
 
 ## 📌 Overview
-A lightweight authentication system built with:
-- Next.js App Router
-- React Context API
-- LocalStorage session persistence
-- Protected route middleware
 
-## ✨ Features
-- 🔒 Hardcoded credential validation
-- 🔄 Session persistence across refreshes
-- 🛡️ Route protection middleware
-- 🎨 Custom UI components
-- ⚡ Optimized performance
+KRAFTEDX is a lightweight client-side authentication system designed for creative and fast-moving teams. It uses modern tools to manage authentication without the complexity of backend integration.
 
+Built with:
 
-## 📦 System Architecture
+- ⚛️ **Next.js App Router**
+- 🔁 **React Context API**
+- 💾 **LocalStorage for session persistence**
+- 🛡️ **Middleware for route protection**
 
-
-
-Sequence of Operations:
-1 Login:
-
-
-2 Dashboard Access:
-
-
-
-3 Logout:
-
-
-
-## 🛠️ Installation
-1. Clone the repository:
-```bash
-git clone https://github.com/yourrepo/kraftedx-auth.git
-cd kraftedx-auth
-```
 
 2. Install dependencies:
 ```bash
