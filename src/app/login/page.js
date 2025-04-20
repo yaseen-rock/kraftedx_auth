@@ -24,16 +24,23 @@ export default function LoginPage() {
   };
 
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
     
-    if (login(username, password)) {
-      router.push('/dashboard');
-    } else {
-      setError('Invalid credentials');
+    try {
+      const success = await login(username, password);
+      if (success) {
+        router.push('/dashboard');
+      } else {
+        setError('Invalid username or password');
+      }
+    } catch (err) {
+      setError('An error occurred during login');
     }
   };
+
+
 
   return (
     <div 
@@ -80,7 +87,24 @@ export default function LoginPage() {
               creative teams deserve delight!
             </p>
           </div>
+
+      {/* Developer Credentials Banner */}
+<div className="mt-4 p-3  text-center">
+  <p className="text-xs font-mono text-green-400">
+    Username: <span className="font-bold">kraftedx</span>
+  </p>
+  <p className="text-xs font-mono text-green-400">
+    Password: <span className="font-bold">123</span>
+  </p>
+</div>
+
           
+           {/* Error message display */}
+           {error && (
+            <div className="p-3 bg-red-900/50 border border-red-700 rounded-md text-red-200 text-sm">
+              {error}
+            </div>
+          )}
           <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <label htmlFor="username" className="block text-sm font-medium text-gray-300 mb-1">

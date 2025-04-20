@@ -14,6 +14,21 @@ export default function DashboardPage() {
     { x: 80, y: 60, size: 35, speedX: -0.4, speedY: -0.5 }
   ]);
 
+  // One-time refresh effect
+  useEffect(() => {
+    const hasRefreshed = localStorage.getItem('hasRefreshed');
+    
+    if (!hasRefreshed) {
+      localStorage.setItem('hasRefreshed', 'true');
+      window.location.reload();
+    }
+
+    // Cleanup function to reset the flag when component unmounts
+    return () => {
+      localStorage.removeItem('hasRefreshed');
+    };
+  }, []);
+
   useEffect(() => {
     const animate = () => {
       setBlobs(prev => {
@@ -93,32 +108,30 @@ export default function DashboardPage() {
               <button className="hover:text-gray-400 transition-colors">CAREERS</button>
               <button className="hover:text-gray-400 transition-colors">CONTACT US</button>
               <button 
-            onClick={logout}
-            className="px-4 py-2 bg-red-600 hover:bg-red-700 rounded-md text-sm"
-          >
-            Logout
-          </button>
+                onClick={logout}
+                className="px-4 py-2 bg-red-600 hover:bg-red-700 rounded-md text-sm"
+              >
+                Logout
+              </button>
             </div>
-             {/* Logout Button */}
-       
           </header>
 
-         {/* Main Text - Centered */}
-<main className="flex flex-col items-center justify-center h-[60vh] pointer-events-auto">
-  <div className="text-center max-w-[95%]">
-    <p className="text-xl mb-2 font-normal tracking-tight leading-[1.2] text-gray-300">
-      in a world where work is often related with chaos and stress
-    </p>
-    <p className="text-6xl font-light tracking-tight leading-[1.2] whitespace-nowrap">
-      creative teams deserve delight!
-    </p>
-  </div>
-</main>
+          {/* Main Text - Centered */}
+          <main className="flex flex-col items-center justify-center h-[60vh] pointer-events-auto">
+            <div className="text-center max-w-[95%]">
+              <p className="text-xl mb-2 font-normal tracking-tight leading-[1.2] text-gray-300">
+                in a world where work is often related with chaos and stress
+              </p>
+              <p className="text-6xl font-light tracking-tight leading-[1.2] whitespace-nowrap">
+                creative teams deserve delight!
+              </p>
+            </div>
+          </main>
 
           {/* Footer */}
-          <footer className="py-8  border-gray-800 mt-auto">
+          <footer className="py-8 border-gray-800 mt-auto">
             <div className="container mx-auto px-4">
-              <div className="flex space-x-5 ">
+              <div className="flex space-x-5">
                 <p className="text-lg">hello@kraftedx.com</p>
                 <button className="hover:text-gray-400 transition-colors">Instagram</button>
                 <button className="hover:text-gray-400 transition-colors">LinkedIn</button>
@@ -126,8 +139,6 @@ export default function DashboardPage() {
             </div>
           </footer>
         </div>
-
-       
       </div>
     </ProtectedRoute>
   );
