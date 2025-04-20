@@ -21,6 +21,23 @@ A lightweight authentication system built with:
 
 ## 📦 System Architecture
 
+Mermaid.js Diagram
+
+![deepseek_mermaid_20250420_beb51a](https://github.com/user-attachments/assets/45804a00-527a-48e4-8c09-36992b082cc2)
+
+Sequence of Operations:
+1 Login:
+
+![deepseek_mermaid_20250420_9e8a0d](https://github.com/user-attachments/assets/b1f7f14a-eb46-4c6d-b76a-db8bbf25ccc2)
+
+2 Dashboard Access:
+
+![deepseek_mermaid_20250420_235ec6](https://github.com/user-attachments/assets/357944dd-4050-4d99-b7af-1cc2f703a886)
+
+3 Logout:
+
+![deepseek_mermaid_20250420_f84885](https://github.com/user-attachments/assets/17460bd3-c499-4799-8275-bb746f7aecf5)
+
 ASCII Diagram
 
 ┌───────────────────────────────────────────────────┐
@@ -48,22 +65,7 @@ ASCII Diagram
 └─────────────┘                       └─────────────┘
                                      └──────────────┘
 
-Mermaid.js Diagram
 
-![deepseek_mermaid_20250420_beb51a](https://github.com/user-attachments/assets/45804a00-527a-48e4-8c09-36992b082cc2)
-
-```Sequence of Operations:
-1 Login:
-
-![deepseek_mermaid_20250420_9e8a0d](https://github.com/user-attachments/assets/b1f7f14a-eb46-4c6d-b76a-db8bbf25ccc2)
-
-2 Dashboard Access:
-
-![deepseek_mermaid_20250420_235ec6](https://github.com/user-attachments/assets/357944dd-4050-4d99-b7af-1cc2f703a886)
-
-3 Logout:
-
-![deepseek_mermaid_20250420_f84885](https://github.com/user-attachments/assets/17460bd3-c499-4799-8275-bb746f7aecf5)
 
 
 ## 🛠️ Installation
