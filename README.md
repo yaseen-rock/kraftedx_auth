@@ -21,6 +21,18 @@ Built with:
 - 🎨 Custom UI components  
 - ⚡ Optimized performance with minimal footprint
 
+
+## Screenshot
+
+1 Login Page
+
+![Screenshot (197)](https://github.com/user-attachments/assets/626826ac-e0bf-41bd-b73f-4da3eafccb36)
+
+2 Dashboard
+
+![Screenshot (198)](https://github.com/user-attachments/assets/b8a367d0-1db6-477e-ac67-51ff8aea57b4)
+
+
 ## 📦 System Architecture
 
 ASCII Diagram
@@ -88,17 +100,6 @@ npm install
 npm run dev
 ```
 
-## Screenshot
-
-1 Login Page
-
-![Screenshot (197)](https://github.com/user-attachments/assets/626826ac-e0bf-41bd-b73f-4da3eafccb36)
-
-2 Dashboard
-
-![Screenshot (198)](https://github.com/user-attachments/assets/b8a367d0-1db6-477e-ac67-51ff8aea57b4)
-
-
 ## 🔐 Authentication Flow
 
 ### Login Process
@@ -150,5 +151,3 @@ const validCredentials = {
 
 ## 📜 License
 MIT © [Yaseen] 2025
-
-![Image Description](https://i.ibb.co/17HLXKV/Screenshot-187-1-1.png)
