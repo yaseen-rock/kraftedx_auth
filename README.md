@@ -21,7 +21,7 @@ A lightweight authentication system built with:
 ## 📦 System Architecture
 ```mermaid
 
-![deepseek_mermaid_20250420_65596d](https://github.com/user-attachments/assets/daa85a43-47a0-4aaa-ac79-eb0909de0782)
+![mermaid](https://ibb.co/JwQXZSJx)
 
 graph TD
     A[Login Page] -->|Submit| B(Auth Context)
