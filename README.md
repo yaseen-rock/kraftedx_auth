@@ -20,6 +20,9 @@ A lightweight authentication system built with:
 
 ## 📦 System Architecture
 ```mermaid
+
+![deepseek_mermaid_20250420_65596d](https://github.com/user-attachments/assets/daa85a43-47a0-4aaa-ac79-eb0909de0782)
+
 graph TD
     A[Login Page] -->|Submit| B(Auth Context)
     B -->|Validate| C{Credentials}
@@ -112,23 +115,3 @@ const validCredentials = {
 
 ## 📜 License
 MIT © [Yaseen] 2025
-
----
-
-> **Note**: This is a demo system. For production use, integrate with a proper backend authentication service like Firebase Auth, Auth0, or Supabase.
-```
-
-### Key Sections Included:
-1. **Visual System Diagram** - Mermaid.js flow chart
-2. **Installation Guide** - Step-by-step setup
-3. **Authentication Flow** - Login/logout sequence
-4. **File Structure** - Component organization
-5. **Configuration** - How to customize
-6. **Production Checklist** - Security considerations
-7. **Best Practices** - Important warnings
-
-Would you like me to add:
-1. API integration examples?
-2. Deployment instructions?
-3. Testing guidelines?
-4. Environment variable setup?
