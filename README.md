@@ -21,8 +21,7 @@ A lightweight authentication system built with:
 ## 📦 System Architecture
 ```mermaid
 
-![mermaid](https://ibb.co/JwQXZSJx)
-
+![Image Description](https://i.ibb.co/17HLXKV/Screenshot-187-1-1.png)
 graph TD
     A[Login Page] -->|Submit| B(Auth Context)
     B -->|Validate| C{Credentials}
