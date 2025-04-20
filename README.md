@@ -31,6 +31,9 @@ graph TD
     E --> F[Dashboard]
     F -->|Logout| B
 ```
+## 📦 System 
+![deepseek_mermaid_20250420_65596d](https://github.com/user-attachments/assets/2b3b3fe7-606f-45e6-bb83-3b8e8866a407)
+
 
 ## 🛠️ Installation
 1. Clone the repository:
