@@ -21,8 +21,6 @@ A lightweight authentication system built with:
 
 ## 📦 System Architecture
 
-Mermaid.js Diagram
-
 ![deepseek_mermaid_20250420_beb51a](https://github.com/user-attachments/assets/45804a00-527a-48e4-8c09-36992b082cc2)
 
 Sequence of Operations:
