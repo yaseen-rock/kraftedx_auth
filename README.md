@@ -37,14 +37,14 @@ ASCII Diagram
        │                  ▲                  │
        │                  │                  ▼
        ▼                  │           ┌─────────────┐
-┌─────────────┐           │           │ session     │
-│ /dashboard  │           │           │ management  │
-│ (page.js)   │           │           └─────────────┘
-└─────────────┘           │                  ▲
+┌─────────────┐          │           │ session     │
+│ /dashboard  │          │           │ management  │
+│ (page.js)   │          │           └─────────────┘
+└─────────────┘          │                  ▲
        │                  │                  │
        ▼                  │                  │
 ┌─────────────┐    ┌─────────────┐    ┌─────────────┐
-│ Protected   │──▶│ AuthContext  │──▶│ logout      │
+│ Protected   │────▶│ AuthContext │────▶│ logout      │
 │ Route       │    │ (check auth)│    │ (clear      │
 │             │    └─────────────┘    │  storage)   │
 └─────────────┘                       └─────────────┘
@@ -53,6 +53,19 @@ ASCII Diagram
 Mermaid Diagram
 
 ![deepseek_mermaid_20250420_beb51a](https://github.com/user-attachments/assets/dc6f6926-944a-4308-8a30-87465e5e5a19)
+
+Sequence of Operations:
+1 Login:
+
+![deepseek_mermaid_20250420_9e8a0d](https://github.com/user-attachments/assets/23511dfe-797e-4eb2-bc3c-6d4183293545)
+
+2 Dashboard Access:
+
+![deepseek_mermaid_20250420_235ec6](https://github.com/user-attachments/assets/b1d88323-6273-4427-876c-a46186d8c862)
+
+3 Logout:
+
+![deepseek_mermaid_20250420_f84885](https://github.com/user-attachments/assets/41f0e8f9-23df-4af6-806c-3ab92aea51c9)
 
 
 ## 🛠️ Installation
